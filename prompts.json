@@ -1,0 +1,46 @@
+[
+  {
+    "id": "A",
+    "title": "Performance calculation (Sharpe ratio)",
+    "lang": "en",
+    "max_tokens": 4096,
+    "text": "Write a Python function that calculates the Sharpe ratio given three inputs:\n- a list of daily returns (as floats)\n- the risk-free rate (annual, as a float, e.g. 0.04)\n- trading days per year (default 252)\n\nHandle edge cases (empty list, zero volatility).\nInclude type hints, a clear docstring, and 2–3 simple unit tests."
+  },
+  {
+    "id": "B",
+    "title": "Bug fixing (cumulative returns)",
+    "lang": "en",
+    "max_tokens": 4096,
+    "note": "Changed from the original plan: the '# <-- bug here' hint was removed so the model has to find the bug.",
+    "text": "This function is meant to compute cumulative returns from a list of daily simple returns, but it is wrong. Fix it and briefly explain the bug.\n\ndef cumulative_returns(daily_returns):\n    cum = 1.0\n    results = []\n    for r in daily_returns:\n        cum = cum + r\n        results.append(cum - 1)\n    return results"
+  },
+  {
+    "id": "C",
+    "title": "Multi-step script (portfolio volatility)",
+    "lang": "en",
+    "max_tokens": 4096,
+    "text": "Write a complete Python script (standard library only) that:\n1. Defines a small portfolio as a list of dicts: [{\"ticker\": \"AAPL\", \"weight\": 0.4, \"daily_vol\": 0.015}, ...]\n2. Calculates the portfolio’s approximate daily volatility assuming zero correlation between assets\n3. Prints the result rounded to 4 decimal places\n4. Includes basic checks (weights sum roughly to 1, no negative weights)\n\nAdd a short comment explaining the zero-correlation assumption."
+  },
+  {
+    "id": "D",
+    "title": "Market vs limit order (English)",
+    "lang": "en",
+    "max_tokens": 2048,
+    "text": "Explain in under 100 words the difference between a market order and a limit order in equities. Then give one practical situation where a limit order is usually preferable."
+  },
+  {
+    "id": "E",
+    "title": "Ordre au marché vs ordre à cours limité (French)",
+    "lang": "fr",
+    "max_tokens": 2048,
+    "text": "Explique en moins de 100 mots la différence entre un ordre au marché et un ordre à cours limité en actions. Donne ensuite une situation concrète où l’ordre à cours limité est généralement préférable."
+  },
+  {
+    "id": "F",
+    "title": "Grounded answer from a given text (French)",
+    "lang": "fr",
+    "max_tokens": 2048,
+    "note": "Added to the original plan: tests a short answer that must stay inside a given text (the job Qwant uses Olala for). The platform is fictional, so no model can answer from memory.",
+    "text": "Texte :\n« La plateforme Delta organise un fixing de clôture chaque jour de bourse. La phase d’accumulation des ordres commence à 17h30 et dure cinq minutes. Pendant cette phase, les ordres peuvent être saisis, modifiés ou annulés, mais aucune transaction n’a lieu. Le cours de clôture est le prix qui maximise le volume échangé. Si deux prix donnent le même volume, la plateforme retient celui qui laisse le plus petit déséquilibre entre achats et ventes. Les ordres au marché non exécutés au fixing sont annulés ; les ordres à cours limité non exécutés restent dans le carnet jusqu’à la fin de leur validité. »\n\nEn t’appuyant uniquement sur ce texte, réponds en trois phrases au plus :\n1. À quelle heure se termine la phase d’accumulation ?\n2. Que devient un ordre à cours limité non exécuté au fixing ?\n3. Quels frais la plateforme facture-t-elle pour participer au fixing ?\nSi le texte ne permet pas de répondre à une question, dis-le."
+  }
+]

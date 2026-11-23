@@ -1,0 +1,20 @@
+{
+  "A1": "olala-mini-7a1b",
+  "A2": "phi-4-mini",
+  "A3": "qwen3.5-9b",
+  "B1": "phi-4-mini",
+  "B2": "olala-mini-7a1b",
+  "B3": "qwen3.5-9b",
+  "C1": "olala-mini-7a1b",
+  "C2": "qwen3.5-9b",
+  "C3": "phi-4-mini",
+  "D1": "qwen3.5-9b",
+  "D2": "olala-mini-7a1b",
+  "D3": "phi-4-mini",
+  "E1": "phi-4-mini",
+  "E2": "olala-mini-7a1b",
+  "E3": "qwen3.5-9b",
+  "F1": "phi-4-mini",
+  "F2": "olala-mini-7a1b",
+  "F3": "qwen3.5-9b"
+}

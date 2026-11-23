@@ -1,0 +1,4 @@
+model,gen_tok_s,ttft_s,time_to_answer_s,total_s,gtt_gib,truncated
+olala-mini-7a1b,61.2,0.1,9.2,12.6,6.87,0
+phi-4-mini,46.1,0.0,0.0,3.6,5.02,0
+qwen3.5-9b,23.9,0.1,0.1,8.1,8.51,0

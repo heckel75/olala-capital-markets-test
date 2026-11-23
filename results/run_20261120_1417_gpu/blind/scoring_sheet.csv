@@ -1,0 +1,19 @@
+code,prompt,correctness_0_5,completeness_0_5,clarity_0_5,no_extra_content_0_5,notes
+A1,A,2,4,3,3,Correctness: missing zero-volatility guard raises ZeroDivisionError; two supplied tests fail and their manual 
+A2,A,1,5,3,3,Correctness: mixes a daily numerator with annualized volatility; annualized Sharpe is 252 times too small at the default. Expected test value is wrong; docstring contradicts exceptions; recap repeats code.
+A3,A,3,4,3,3,Core calculation and edge handling work, but tests use invalid rf_rate keyword; doctest result is wrong. Four tests exceed the requested 2-3; incomplete extra formula confuses the docstring.
+B1,B,2,5,4,3,Correctness: omits subtracting 1 and returns wealth factors instead of cumulative returns. Explanation repeats itself and mislabels the output.
+B2,B,5,5,5,4,Correct compounding fix and conversion back to returns. Opening and closing explanations partly repeat.
+B3,B,5,5,5,4,Correct fix and helpful compounding example. Final wrong/right equations repeat the explanation.
+C1,C,4,5,4,4,Correct formula, checks and output (0.0094). Zero correlation does not imply independence; comments repeat the assumption.
+C2,C,2,5,3,3,Correctness: uses weight instead of weight squared, producing 0.0176 instead of 0.0103. Code contradicts its formula comment; added diversification claim is misleading.
+C3,C,4,5,4,4,Correct formula, checks and output (0.0113). Final prose incorrectly says to sum weighted volatilities directly; redundant summary.
+D1,D,4,5,5,4,Clear distinction and relevant example; 94 words. Guaranteeing speed is an unsupported absolute claim.
+D2,D,4,5,4,4,Relevant example; 71 words. Fill only at your target conflicts with at the limit or better; that added phrase is misleading and the example is awkwardly worded.
+D3,D,4,5,4,5,Relevant and concise at 67 words. Initial exact-price wording is imprecise; risk of no execution is left implicit.
+E1,E,2,4,3,2,Correctness and no-extra: unsupported claims of no market impact and a guaranteed transaction. Exactly 100 words fails under 100; long sentence reduces clarity.
+E2,E,4,4,4,3,Main distinction and example are useful, but 114 words exceeds the limit. Repeats price-control claims; market-ready and sell-price wording are imprecise.
+E3,E,3,5,4,3,94 words and includes nonexecution risk, but overclaims capital protection and adds unsupported speculative/artificial-price language.
+F1,F,3,5,5,2,No-extra: source-contradicting cancellation claim. An unexecuted limit order remains in the book until expiry; the other two answers are correct.
+F2,F,3,5,5,2,No-extra: unsupported 18h00 end time; 17h30 plus five minutes is 17h35. The other two answers are correct.
+F3,F,5,5,5,4,All three answers are correct. The market-order cancellation detail is in the source but unnecessary to answer the questions.
